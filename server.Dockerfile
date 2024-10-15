@@ -12,6 +12,7 @@ RUN echo '#!/bin/bash\n\
 ip tuntap add dev tun0 mode tun\n\
 ip addr add 10.0.0.1/24 dev tun0\n\
 ip link set tun0 up\n\
+ip route\n\
 python3 -m http.server --bind 10.0.0.1 8080 --directory /public_html\n\
 ' > start_server.sh && chmod +x start_server.sh
 

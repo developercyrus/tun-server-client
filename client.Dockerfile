@@ -10,6 +10,7 @@ ip tuntap add dev tun0 mode tun\n\
 ip addr add 10.0.0.2/24 dev tun0\n\
 ip link set tun0 up\n\
 ip route add 10.0.0.1 dev tun0\n\
+ip route\n\
 echo "Waiting for server to be ready..."\n\
 sleep 5\n\
 echo "Attempting to curl server..."\n\
